@@ -350,7 +350,6 @@ def get_hiera_data(node, show_modules=None, hide_modules=None, show_files=None, 
                                                                     '</div><div class="panel-body">'
                     )
                     data_result += recurse_result
-                    data_result.append('</div></div>')
 
             # THIS IS FOR GROUPS
             elif type(hieratree[k]) is list:
@@ -372,7 +371,7 @@ def get_hiera_data(node, show_modules=None, hide_modules=None, show_files=None, 
                                                               '</div><div class="panel-body">'
                     )
                     data_result += recurse_result
-                    data_result.append('</div></div>')
+            data_result.append('</div></div>')
 
         data_result = '\n<br>\n'.join(data_result)
         return data_result
