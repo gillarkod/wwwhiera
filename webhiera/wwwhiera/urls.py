@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'hiera/', include('hiera.urls')),
+    url(r'', include('webhiera.hiera.urls')),
+    url(r'^hiera/', include('webhiera.hiera.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]

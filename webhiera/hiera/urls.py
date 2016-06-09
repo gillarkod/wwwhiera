@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, patterns
 
-from hiera.views.hiera import home, get_nodes, hiera
+from webhiera.hiera.views.hiera import home, get_nodes, hiera
 
 urlpatterns = patterns('',
                        url(r'^$', home, name='home'),

@@ -67,7 +67,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'wwwhiera.urls'
+ROOT_URLCONF = 'webhiera.wwwhiera.urls'
 
 
 TEMPLATES = [
@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wwwhiera.wsgi.application'
+WSGI_APPLICATION = 'webhiera.wwwhiera.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
