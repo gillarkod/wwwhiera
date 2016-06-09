@@ -302,10 +302,10 @@ def get_hiera_data(node, show_modules=None, hide_modules=None, show_files=None, 
                         output.append(indent_key * level + "<strong>%s</strong>: <code>%s</code>" % (k, v))
                     else:
                         output.append(
-                            indent_key * level + "<strong>%s</strong>: <code>%s</code>" % (k, v.replace('\n', '<br>')))
+                            indent_key * level + "<strong>%s</strong>: <code>%s</code>" % (k, str(v).replace('\n', '<br>')))
             elif type(data_dict) is list:
                 for item in sorted(data_dict):
-                    output.append(indent_key * level + "<code>%s</code>" % item.replace('\n', '<br>'))
+                    output.append(indent_key * level + "<code>%s</code>" % str(item).replace('\n', '<br>'))
             elif type(data_dict) is str:
                 output.append(indent_key * level + "<code>%s</code>" % data_dict.replace('\n', '<br>'))
             elif type(data_dict) is bool:
