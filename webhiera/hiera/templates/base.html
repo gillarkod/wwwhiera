@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Hiera Web Viewer</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'hiera/css/bootstrap.css' %}" rel="stylesheet">
+    <!-- Extra CSS Files -->
+    {% block cssfiles %}
+    {% endblock %}
+
+
+
+</head>
+<body>
+<div class="site-wrapper">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'home' %}">Web-Hiera</a>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="row" style="padding-top: 10px;">
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'hiera/js/jquery.min.js' %}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'hiera/js/bootstrap.min.js' %}"></script>
+<!-- extra stuff to load - page unique -->
+{% block jslibs %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block cssfiles %}
+    <link href="{% static 'custom/nodeahead.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <form>
+            <div class="form-group" id="form-node_search">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-2">
+                        <label for="node_search">Node Name</label>
+                        <input type="text" class="form-control" name="node_search" id="node_search"
+                               placeholder="Search and select a node.">
+                        <br/>
+                    </div>
+                     <div class="col-md-6">
+                        <label for="file_show">Show Files</label>
+                        <input type="text" class="form-control" name="file_show" id="file_show"
+                               placeholder="groups/afs.yaml,groups/base.yaml osfamily/RedHat-6.yaml">
+                        <br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                        <label for="module_show">Show Modules</label>
+                        <input type="text" class="form-control" name="module_show" id="module_show"
+                               placeholder="haproxy::listen pam">
+                        <br/>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="module_hide">Hide Modules</label>
+                        <input type="text" class="form-control" name="module_hide" id="module_hide"
+                               placeholder="autofs mysql::vhost">
+                        <br/>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="file_hide">Hide Files</label>
+                        <input type="text" class="form-control" name="file_hide" id="file_hide"
+                               placeholder="common.yaml kernel/Linux.yaml">
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-2" id="hiera_data">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block jslibs %}
+    <script src="{% static 'hiera/js/typeahead.bundle.min.js' %}"></script>
+    <script src="{% static 'custom/nodeahead.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,5 @@
+Django==1.8.8
+django-constance==1.2
+django-picklefield==0.3.2
+PyYAML==3.11
+requests==2.10.0
